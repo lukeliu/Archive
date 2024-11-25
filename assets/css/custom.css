@@ -1744,6 +1744,7 @@ a:hover .btn_dept{
 
 .h_link img {
     transition: all .3s ease;
+    min-width: 100%;
 }
 
 .h_link:hover .pic {
