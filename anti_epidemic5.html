@@ -607,8 +607,10 @@
             });
 
             $('#List_Photo').on('click', '.photo.active', function() {
-                var url = location.origin + '/' + $(this).attr('big');
-                console.log('url : '+url);
+                var pathname = window.location.pathname;
+                var path1 = pathname.substring(0, pathname.lastIndexOf('/'));
+                var url = location.origin + path1 + $(this).attr('big');
+                console.log('url : '+ url);
                 if($(this).attr('big') !== undefined){
                     window.open(url, '_blank').focus();
                 }
