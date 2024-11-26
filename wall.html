@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Masonry Photo Wall</title>
+    <style>
+        /* styles.css */
+        .grid {
+            width: 100%;
+        }
+
+        .grid-item {
+            width: 100px;
+            height: auto;
+            transition: all 1s ease-in-out;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+            transform: scale(1);
+        }
+
+        .grid-item.enlarged img {
+            transition: all 1s ease-in-out;
+            transform: scale(2);
+            /* 放大圖片 */
+        }
+
+        #gridshow {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid" class="grid" style="visibility: hidden; pointer-events: none;">
+        <div class="grid-item">
+            <img src="https://fakeimg.pl/300/">
+        </div>
+        <div class="grid-item">
+            <img src="https://fakeimg.pl/250x100/">
+        </div>
+        <div class="grid-item">
+            <img src="https://fakeimg.pl/250x100/ff0000/">
+        </div>
+        <div class="grid-item">
+            <img src="https://fakeimg.pl/350x200/ff0000/000">
+        </div>
+        <div class="grid-item">
+            <img src="https://fakeimg.pl/350x200/ff0000,128/000,255">
+        </div>
+        <div class="grid-item">
+            <img src="https://fakeimg.pl/350x200/?text=Hello">
+        </div>
+        <div class="grid-item">
+            <img src="https://fakeimg.pl/200x100/?retina=1&text=こんにちは&font=noto">
+        </div>
+        <div class="grid-item">
+            <img src="https://fakeimg.pl/350x200/?text=World&font=lobster">
+        </div>
+    </div>
+    <div id="gridshow" class="grid"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script>
+        // script.js
+        $(document).ready(function () {
+            var temp = $('.grid').html();
+            for (i = 0; i < 50; i++) {
+                $('.grid').append(temp);
+            }
+            var $grid = $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: 100,
+                gutter: 10
+            });
+
+            $('#gridshow').html($('#grid').html());
+            $('#grid').hide();
+
+            $('#gridshow .grid-item').on('click', function () {
+                var $this = $(this);
+                var isEnlarged = $this.hasClass('enlarged');
+
+                // 恢復所有圖片
+                $('#gridshow .grid-item').removeClass('enlarged');
+
+                if (!isEnlarged) {
+                    $this.addClass('enlarged');
+
+                    // 擠開300px範圍內的照片
+                    var offset = $this.offset();
+                    var centerX = offset.left + $this.width() / 2;
+                    var centerY = offset.top + $this.height() / 2;
+
+                    $('#gridshow .grid-item').each(function () {
+                        var $img = $(this);
+                        if(!$img.hasClass('enlarged')){
+                            var imgOffset = $img.offset();
+                            var imgCenterX = imgOffset.left + $img.width() / 2;
+                            var imgCenterY = imgOffset.top + $img.height() / 2;
+
+                            var distance = Math.sqrt(Math.pow(centerX - imgCenterX, 2) + Math.pow(centerY - imgCenterY, 2));
+
+                            if (distance < 300) {
+                                var angle = Math.atan2(imgCenterY - centerY, imgCenterX - centerX);
+                                var newX = centerX + 300 * Math.cos(angle) - $img.width() / 2;
+                                var newY = centerY + 300 * Math.sin(angle) - $img.height() / 2;
+
+                                $img.css({
+                                    position: 'absolute',
+                                    left: newX + 'px',
+                                    top: newY + 'px'
+                                });
+                            }
+                        }
+                    });
+                } else {
+                    // 恢復所有圖片位置
+                    $('#gridshow .grid-item').css({
+                        position: 'static'
+                    });
+                }
+
+                $grid.masonry('layout');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
