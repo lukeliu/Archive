@@ -81,6 +81,15 @@
             });
 
             $('#gridshow').html($('#grid').html());
+            // console.log('X: '+imgCenterX+' Y: '+imgCenterY);
+            $('#gridshow .grid-item').each(function(){
+                var $img = $(this);
+                var X = $img.css('left');
+                var Y = $img.css('top');
+                $img.attr('X', X);
+                $img.attr('Y', Y);
+            });
+            
             $('#grid').hide();
 
             $('#gridshow .grid-item').on('click', function () {
@@ -122,8 +131,16 @@
                     });
                 } else {
                     // 恢復所有圖片位置
-                    $('#gridshow .grid-item').css({
-                        position: 'static'
+                    console.log('恢復所有圖片位置');
+                    $('#gridshow .grid-item').each(function(i){
+                        var X = $(this).attr('X');
+                        var Y = $(this).attr('Y');
+                        // console.log('grid-item('+ i+') X: '+X+' Y: '+Y);
+                        $(this).css({
+                            position: 'absolute',
+                            left: X,
+                            top: Y
+                        });
                     });
                 }
 
