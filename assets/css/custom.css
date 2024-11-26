@@ -1697,6 +1697,9 @@ a:hover .btn_dept{
         max-height: auto;
         width: 100%;
     }
+    .Anti_epidemic .area2 {
+        min-height: 750px;
+    }
 }
 
 
@@ -2567,7 +2570,7 @@ a:hover .btn_dept{
 .slider_info .slider_number {
     font-size: 20px;
     line-height: 1.4em;
-    max-width: 630px;
+    max-width: 790px;
     text-align: center;
     margin: 0 auto;
 }
