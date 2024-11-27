@@ -2292,6 +2292,17 @@ a:hover .btn_dept{
     #List_Photo {
         bottom: -100px;
     }
+    #Big_Photo {
+        height: auto;
+        max-height: 100%;
+        width: auto;
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    #Big_Photo .img-fluid.photo {
+        max-width: 100%;
+        max-height: 100%;
+    }
     .History .area2 {
         min-height: 760px;
     }
