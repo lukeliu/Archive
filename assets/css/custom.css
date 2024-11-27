@@ -2295,6 +2295,17 @@ a:hover .btn_dept{
     .History .area2 {
         min-height: 760px;
     }
+    .slider>.navContainer.right {
+        right: -24%;
+        transform: scale(.75);
+    }
+    .slider>.navContainer.left {
+        left: -24%;
+        transform: scale(.75);
+    }
+    .slider>.navContainer>.leftClass:hover, .slider>.navContainer>.rightClass:hover {
+        transform: scale(.5);
+    }
 }
 
 
