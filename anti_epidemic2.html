@@ -500,8 +500,10 @@
 
             $('#List_Photo').on('click', '.photo.active', function() {
                 var pathname = window.location.pathname;
+                var big = $(this).attr('big');
+                big = big.replace('.','');
                 var path1 = pathname.substring(0, pathname.lastIndexOf('/'));
-                var url = location.origin + path1 + $(this).attr('big');
+                var url = location.origin + path1 + big;
                 console.log('url : '+ url);
                 if($(this).attr('big') !== undefined){
                     window.open(url, '_blank').focus();
