@@ -672,11 +672,8 @@ h6,
         display: none;
     }
     #header .h_title img {
-        margin: 2vh auto 0 9%;
-    }
-    .history_page #header .h_title img {
-        margin: 12vh auto 0 9%;
-        width: 50%;
+        margin: 30vh auto 0 9%;
+        width: 60%;
     }
 }
 
