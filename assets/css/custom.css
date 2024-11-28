@@ -31,7 +31,7 @@ body {
 }
 
 a {
-    color: #4fa6d5;
+    color: #3e87ae;
 }
 
 a:hover {
@@ -1612,6 +1612,7 @@ a:hover .btn_dept{
 .Challenge p {
     color: #595757;
     line-height: 2.2em;
+    font-size: 20px;
 }
 
 .Challenge_img {
@@ -1662,6 +1663,7 @@ a:hover .btn_dept{
     color: #595757;
     font-size: 15px;
     margin: 10px auto;
+    text-align: center;
 }
 
 .Anti_epidemic .area2 {
@@ -1729,6 +1731,7 @@ a:hover .btn_dept{
     color: #595757;
     font-size: 14px;
     margin: 10px 0;
+    text-align: center;
 }
 
 .History .area2 {
@@ -2303,6 +2306,9 @@ a:hover .btn_dept{
         max-width: 100%;
         max-height: 100%;
     }
+    #Big_Photo .photo.big_pic {
+        pointer-events: all;
+    }
     .History .area2 {
         min-height: 760px;
     }
@@ -2577,6 +2583,7 @@ a:hover .btn_dept{
     margin: 20px 0 60px;
     line-height: 1.5em;
     font-size: 15px;
+    text-align: center;
 }
 
 .boxp p.small{
