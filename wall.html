@@ -14,8 +14,9 @@
         .grid-item {
             width: 50px;
             height: auto;
-            transition: all .5s ease-out;
-            transition-timing-function: cubic-bezier(0.5, 2.0, 0.1, 0.5);
+            transition: all 1.5s ease-out;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+            transform: rotate(0deg);
         }
 
         .grid-item img {
@@ -23,14 +24,14 @@
             height: auto;
             cursor: pointer;
             transition: all .5s ease-out;
-            transition-timing-function: cubic-bezier(0.5, 2.0, 0.1, 0.5);
-            transform: scale(1);
+            transition-timing-function: cubic-bezier(0.5, 1.0, 0.5, 0.95);
+            transform: scale(1) rotate(0deg);
         }
 
         .grid-item.enlarged img {
-            transition: all .5s ease-out;
-            transition-timing-function: cubic-bezier(0.5, 2.0, 0.1, 0.5);
-            transform: scale(3);
+            transition: all 1s ease-out;
+            transition-timing-function: cubic-bezier(0.5, 1.0, 0.5, 0.95);
+            transform: scale(3) rotate(360deg);
             /* 放大圖片 */
         }
 
@@ -89,14 +90,14 @@
 
             $('#gridshow').html($('#grid').html());
             // console.log('X: '+imgCenterX+' Y: '+imgCenterY);
-            $('#gridshow .grid-item').each(function(){
+            $('#gridshow .grid-item').each(function () {
                 var $img = $(this);
                 var X = $img.css('left');
                 var Y = $img.css('top');
                 $img.attr('X', X);
                 $img.attr('Y', Y);
             });
-            
+
             $('#grid').hide();
 
             $('#gridshow .grid-item').on('click', function () {
@@ -107,16 +108,18 @@
                 $('#gridshow .grid-item').removeClass('enlarged');
 
                 if (!isEnlarged) {
-                    $this.addClass('enlarged');
+                    $this.addClass('enlarged').css({
+                        transform: 'rotate(0deg)'
+                    });
 
                     // 擠開300px範圍內的照片
                     var offset = $this.offset();
                     var centerX = offset.left + $this.width() / 2;
                     var centerY = offset.top + $this.height() / 2;
 
-                    $('#gridshow .grid-item').each(function () {
+                    $('#gridshow .grid-item').each(function (i) {
                         var $img = $(this);
-                        if(!$img.hasClass('enlarged')){
+                        if (!$img.hasClass('enlarged')) {
                             var imgOffset = $img.offset();
                             var imgCenterX = imgOffset.left + $img.width() / 2;
                             var imgCenterY = imgOffset.top + $img.height() / 2;
@@ -127,11 +130,12 @@
                                 var angle = Math.atan2(imgCenterY - centerY, imgCenterX - centerX);
                                 var newX = centerX + 300 * Math.cos(angle) - $img.width() / 2;
                                 var newY = centerY + 300 * Math.sin(angle) - $img.height() / 2;
-
+                                console.log( Math.floor(Math.random() * 360) );
                                 $img.css({
                                     position: 'absolute',
                                     left: newX + 'px',
-                                    top: newY + 'px'
+                                    top: newY + 'px',
+                                    transform: 'rotate('+  Math.floor(Math.random() * 360) +'deg)'
                                 });
                             }
                         }
@@ -139,14 +143,15 @@
                 } else {
                     // 恢復所有圖片位置
                     console.log('恢復所有圖片位置');
-                    $('#gridshow .grid-item').each(function(i){
+                    $('#gridshow .grid-item').each(function (i) {
                         var X = $(this).attr('X');
                         var Y = $(this).attr('Y');
                         // console.log('grid-item('+ i+') X: '+X+' Y: '+Y);
                         $(this).css({
                             position: 'absolute',
                             left: X,
-                            top: Y
+                            top: Y,
+                            transform: 'rotate(0deg)'
                         });
                     });
                 }
