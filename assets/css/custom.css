@@ -139,6 +139,26 @@ h6,
     background: url(../../images/header_bg3_1.jpg) center 0 no-repeat;
 }
 
+.anti_epidemic_page2 #header {
+    background: url(../../images/header_bg3_2.jpg) center 0 no-repeat;
+}
+
+.anti_epidemic_page3 #header {
+    background: url(../../images/header_bg3_3.jpg) center 0 no-repeat;
+}
+
+.anti_epidemic_page4 #header {
+    background: url(../../images/header_bg3_4.jpg) center 0 no-repeat;
+}
+
+.anti_epidemic_page5 #header {
+    background: url(../../images/header_bg3_5.jpg) center 0 no-repeat;
+}
+
+.anti_epidemic_page6 #header {
+    background: url(../../images/header_bg3_6.jpg) center 0 no-repeat;
+}
+
 #header.header-transparent {
     background: none;
 }
@@ -161,11 +181,36 @@ h6,
     padding: 0;
     width: 284px;
     margin: 50px 0 0 120px;
-    transition: all .3s ease;
+    position: relative;
 }
 
-#header .logo:hover {
-    transform: scale(0.97);
+#header .logo a {
+    display: block;
+    position: absolute;
+    color: #6e98ad;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all .3s ease;
+    text-decoration: none;
+    top: 46%;
+    right: -40%;
+}
+
+#header .logo a[aria-expanded="true"],
+#header .logo:hover a,
+#header .logo.active a{
+    color: #000;
+}
+
+#header .logo a[aria-expanded="true"]:before,
+#header .logo:hover a:before,
+#header .logo.active a:before {
+    content: attr(data-storke);
+    position: absolute;
+    color: #000;
+    -webkit-text-stroke: 4px #fff;
+    text-stroke: 4px #fff;
+    z-index: -1;
 }
 
 #header h1.title {
@@ -211,7 +256,7 @@ h6,
     width: 40%;
     height: auto;
     max-width: fit-content;
-    margin: 31vh auto 0 9%;
+    margin: 24vh auto 0 9%;
 }
 
 #header hr {
@@ -376,6 +421,10 @@ h6,
         background-position-x: 65%;
         min-height: 690px;
     }
+    .anti_epidemic_page6 #header {
+        background-position-x: 65%;
+        min-height: 690px;
+    }
     .challenge_page #header {
         background-position-x: 65%;
         min-height: 690px;
@@ -502,15 +551,18 @@ h6,
     font-size: 20px;
     padding: 3px 15px;
     text-align: center;
-    min-width: 220px;
+    min-width: 230px;
 }
 
 .nav-menu a.dropdown-item:hover,
 .nav-menu a.dropdown-item.active {
     color: #00aa8e;
-    font-size: 24px;
     padding: 4px 0 2px;
     background-color: #fff;
+}
+
+.nav-menu a.dropdown-item:hover {
+    font-size: 24px;
 }
 
 .nav-menu .dropdown-toggle::after {
@@ -679,19 +731,19 @@ h6,
 
 @media (max-width: 580px) {
     #header .h_title img {
-        margin: 25vh auto 0 9%;
+        margin: 22vh auto 0 4%;
         width: 80%;
     }
     .history_page #header .h_title img {
-        margin: 25vh auto 0 9%;
+        margin: 22vh auto 0 4%;
         width: 84%;
     }
     .anti_epidemic_page1 #header .h_title img {
-        margin: 25vh auto 0 9%;
+        margin: 22vh auto 0 4%;
         width: 84%;
     }
     .challenge_page #header .h_title img {
-        margin: 25vh auto 0 9%;
+        margin: 22vh auto 0 4%;
         width: 84%;
     }
 }
@@ -836,7 +888,7 @@ h6,
 
 .mobile-nav-active .mobile-nav .dropdown-menu a {
     display: block;
-    color: #000;
+    color: #136472;
     border-bottom: none;
     text-indent: 15px;
     padding: 2px 15px;
@@ -1345,7 +1397,6 @@ p .more:hover{
 .LinkInfo a {
     display: block;
     transition: all .3s ease;
-    margin-top: -50px;
 }
 
 .LinkInfo a:hover {
@@ -2864,7 +2915,7 @@ a:hover .btn_dept{
 
 #footer {
     background-color: #fff;
-    padding: 0 0 60px 0;
+    padding: 0 0 90px 0;
     color: #333;
     font-size: 18px;
     max-width: 1920px;
@@ -3006,7 +3057,7 @@ a:hover .btn_dept{
 
 #footer .footer-top .footer-link .dropdown-menu {
     margin-top: -11px;
-    max-width: 150px;
+    max-width: 180px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -3112,7 +3163,7 @@ a:hover .btn_dept{
     color: #FFF;
 }
 .m_show {
-    display: none;
+    display: none !important;
 }
 
 @media (min-width: 1920px) {
@@ -3199,12 +3250,27 @@ a:hover .btn_dept{
     .nav-menu .float-left a {
         font-size: 14px;
     }
+    .m_show {
+        display: block;
+    }
+    .mobile-nav .m_show {
+        display: block !important;
+    }
 }
 
 @media (max-width: 1024px) {
     #footer .designed {
         border-top: none;
         padding: 0 0 30px 310px;
+    }
+    .m_show {
+        display: block;
+    }
+    .mobile-nav .m_show {
+        display: block !important;
+    }
+    #header .logo a {
+        display: none;
     }
 }
 
@@ -3233,9 +3299,6 @@ a:hover .btn_dept{
     }
     #footer .designed {
         padding: 0 0 30px 40px;
-    }
-    .m_show {
-        display: block;
     }
     #footer {
         padding: 0 0 150px 0;
