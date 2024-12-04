@@ -206,8 +206,10 @@
                 let newTop = top + (delta > 0 ? itemHeight : -itemHeight);
 
                 // 限制滾動範圍
-                if (newTop > 100) newTop = 100;
-                if (newTop < -($ul.height() - itemHeight * 3)) newTop = -($ul.height() - itemHeight * 3);
+                //if (newTop > 100) newTop = 100;
+                //if (newTop < -($ul.height() - itemHeight * 3)) newTop = -($ul.height() - itemHeight * 3);
+                if (newTop > 100) newTop = -($ul.height() - itemHeight * 3);
+                if (newTop < -($ul.height() - itemHeight * 3)) newTop = 100;
                 //console.log('itemHeight : '+ itemHeight);
                 let num = newTop;
                 let nid = 2 - Math.round(num / itemHeight);
