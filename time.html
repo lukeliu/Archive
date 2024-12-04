@@ -171,12 +171,20 @@
 
             // 隱藏不適用的日期
             function updateDays() {
-                let month = parseInt($('.months').css('top')) / -50 + 1;
-                let year = parseInt($('.years').css('top')) / -50 + 1900;
+                getAllvalue();
+                let month = parseInt($('.months li.active').text());
+                let year = parseInt($('.years li.active').text());
                 let daysInMonth = new Date(year, month, 0).getDate();
-
+                // console.log('year: '+year);
+                // console.log('month: '+month);
+                // console.log('daysInMonth: '+daysInMonth);
                 $('.days li').show();
                 $('.days li:gt(' + (daysInMonth - 1) + ')').hide();
+                if($('.days li.active').is(':hidden')){
+                    let pos = -(daysInMonth-3) * 50;
+                    $('.days').css('top', pos + 'px');
+                    getAllvalue();
+                }
             }
 
             $('.months, .years').on('transitionend', updateDays);
@@ -191,7 +199,7 @@
                 // console.log('dY : ' + dY);
                 let delta = e.originalEvent.wheelDelta || -e.originalEvent.detail || e.originalEvent.touches[0].clientY;
                 // console.log('delta : ' + delta);
-                if(dY < 0) delta = -delta;
+                if (dY < 0) delta = -delta;
                 let $ul = $(this).find('ul');
                 let top = parseInt($ul.css('top')) || 0;
                 let itemHeight = $(this).find('li').outerHeight();
@@ -223,6 +231,7 @@
                 num[4] = $('.minutes').css('top');
                 let itemHeight = $('.slot li').outerHeight();
                 $('.slot').each(function (i) {
+                    $(this).find('li').removeClass('active');
                     val[i] = 2 - Math.round(parseInt(num[i]) / itemHeight);
                     // console.log('num['+i+']: ' + num[i]);
                     // console.log('val['+i+']: ' + val[i]);
@@ -231,6 +240,7 @@
                     if (i > 0 && i < 3) time = time + '/' + $(this).find('li').eq(val[i]).text();
                     if (i === 3) time = time + ' ' + $(this).find('li').eq(val[i]).text();
                     if (i > 3) time = time + ':' + $(this).find('li').eq(val[i]).text();
+                    $(this).find('li').eq(val[i]).addClass('active');
                 });
                 // console.log(time);
                 // console.log('---------------');

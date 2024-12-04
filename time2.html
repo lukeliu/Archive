@@ -185,6 +185,7 @@
 
             // 隱藏不適用的日期
             function updateDays() {
+                // getAllvalue();
                 const months = document.querySelector('.months');
                 const years = document.querySelector('.years');
                 const days = document.querySelector('.days');
@@ -199,6 +200,13 @@
                         li.style.display = 'flex';
                     }
                 });
+                // console.log(document.querySelector('.days .active'));
+                if (document.querySelector('.days .active') != null && document.querySelector('.days .active').style.display === 'none') {
+                    let pos = -(daysInMonth - 3) * 50;
+                    document.querySelector('.days').style.top = pos + 'px';
+                    getAllvalue();
+                }
+
             }
 
             document.querySelectorAll('.months, .years').forEach(el => {
@@ -242,12 +250,14 @@
                 num[3] = document.querySelector('.hours').style.top;
                 num[4] = document.querySelector('.minutes').style.top;
                 let itemHeight = document.querySelector('.slot li').offsetHeight;
+                document.querySelectorAll('.slot li').forEach(li => li.classList.remove('active'));
                 document.querySelectorAll('.slot').forEach((slot, i) => {
                     val[i] = 2 - Math.round(parseInt(num[i]) / itemHeight);
                     if (i === 0) time = slot.querySelector('li:nth-child(' + (val[i] + 1) + ')').textContent;
                     if (i > 0 && i < 3) time = time + '/' + slot.querySelector('li:nth-child(' + (val[i] + 1) + ')').textContent;
                     if (i === 3) time = time + ' ' + slot.querySelector('li:nth-child(' + (val[i] + 1) + ')').textContent;
                     if (i > 3) time = time + ':' + slot.querySelector('li:nth-child(' + (val[i] + 1) + ')').textContent;
+                    slot.querySelector('li:nth-child(' + (val[i] + 1) + ')').classList.add('active');
                 });
                 console.log(time);
                 return time;
