@@ -372,7 +372,9 @@
             $(document).on('click','.slider>img.center', function() {
                 var slink = $(this).attr('src');
                 console.log(slink);
-                var url = location.origin + '/' + slink;
+                var pathname = window.location.pathname;
+                var path1 = pathname.substring(0, pathname.lastIndexOf('/'));
+                var url = location.origin + path1 + '/' + slink;
                 console.log('url : '+url);
                 if($(this).attr('src') !== undefined){
                     window.open(url, '_blank').focus();
