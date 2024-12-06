@@ -136,6 +136,17 @@
         return false;
     });
 
+    $('.linkto').click(function(e) {
+        e.preventDefault();
+        let hid = $(this).attr('href');
+        let htop = $(hid).offset();
+        console.log(htop.top)
+        $('html, body').animate({
+            scrollTop: htop.top - 100
+        }, 1500, 'easeInOutExpo');
+        return false;
+    });
+
     // Initiate the venobox plugin
     $(window).on('load', function() {
         loadMobileNav();

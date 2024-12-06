@@ -85,26 +85,17 @@
                             <img src="images/anti_epidemic_title5_1.png" class="img-fluid mb-5" alt="加入守護國門行列 建置新竹檢疫所" data-aos="fade-up">
                         </div>
 
-                        <div class="row no-gutters justify-content-between">
-                            <div class="col-md-6">
-                                <p>109年2月18日至110年4月1日成立新竹集中檢疫所，計有114間房，共收容1,256人，來自23個國家，新竹台大分院完成965人次PCR採檢，其中8人確診，另完成通訊診療31人。</p>
-
-                                <p>疫情初期，臺灣關閉國門，對於旅居中國的臺灣人，以類包機方式返臺，返臺後，入住集中檢疫所進行14日隔離。新竹醫院於109年4月20日至桃園機場進行武漢類包機接機任務，共接回116人入住新竹集中檢疫。</p>
+                        <div class="row no-gutters justify-content-center">
+                            <div class="col-12 mb-5">
+                                <p>2020年2月18日至4月1日新竹分院奉衛福部之命緊急成立新竹集中檢疫所，檢疫所由醫軍警跨業跨團隊合作，提供一條龍服務，本院負責住民身心靈健康照護、保安警察第一總隊負責檢疫所安全，空軍第二戰術戰鬥機聯隊提供檢疫所日常生活供給之後勤作業。從入住、看診、採檢作業、檢驗作業、後送本院就醫及解隔之流程規劃，均希望讓住民住得安心、安全。新竹集中檢疫所計有114間房，共收容來自23個國家1,256人，共完成965人次PCR採檢，其中8人確診，另完成通訊診療31人。為調劑生活，紓緩住民情緒，所內舉辦豆腐盃摺棉被競賽、由護理師充當DJ開設心情點播站，團隊與住民間的溫暖互動，讓住民倍感安心，並由衷感激團隊的照護。</p>
                             </div>
-                            <div class="col-md-5 mb-5">
+                            <div class="col-lg-6 col-6 mb-5 text-center">
                                 <img src="images/img_anti_epidemic9_1.jpg" class="img-fluid Anti_epidemic_img" alt="" data-aos="fade-right">
-                                <div class="text">成立新竹集中檢疫所</div>
+                                <div class="text">由洪冠予院長帶領醫護團隊成立新竹集中檢疫所。</div>
                             </div>
-                            <div class="col-md-5">
-                                <img src="images/img_anti_epidemic9_2.jpg" class="img-fluid Anti_epidemic_img" alt="" data-aos="fade-left">
-                                <div class="text">桃園機場進行類包機接機任務</div>
-                            </div>
-                            <div class="col-md-6">
-                                <p>檢疫所由醫軍警跨業跨團隊合作，提供一條龍服務，新竹臺大分院負責住民身心靈健康照護、保安警察第一總隊負責檢疫所安全，空軍第二戰術戰鬥機聯隊提供檢疫所日常生活供給之後勤作業。</p>
-
-                                <p>從採檢作業、檢驗作業及後送本院就醫，讓住民住得安心、安全。</p>
-
-                                <p>另外，111年1月1日成立香山集中檢疫所(111/01/01-111/02/28)，計219間房，共收容528人，完成825人次PCR採檢，其中9人確診，另完成通訊診療2人。</p>
+                            <div class="col-lg-6 col-6 mb-5 text-center">
+                                <img src="images/img_anti_epidemic9_3.jpg" class="img-fluid Anti_epidemic_img" alt="" data-aos="fade-left">
+                                <div class="text">新竹集中檢疫所(陳時中部長、余忠仁院長與同仁合影)。</div>
                             </div>
 
                             <div class="col-12 mt-5 mb-5">
@@ -438,7 +429,7 @@
                     var dbData = _Data[tindex];
                     
                     if(dbData['date'] !== undefined){
-                        $('#hr_list').append('<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="'+ i*100 +'"><div class="boxp h_link" data-aos="fade-up" data-toggle="modal" data-target="#showModal" data-index="'+ tindex +'"><div class="pic"><img src="data/Official/3-5/S-'+ dbData['photos']['0'] +'" class="img-fluid" alt=""></div><p>'+ dbData['summary']['zh'] +'</p></div>');
+                        $('#hr_list').append('<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="'+ i*100 +'"><div id="h_link_'+ tindex +'" class="boxp h_link" data-aos="fade-up" data-toggle="modal" data-target="#showModal" data-index="'+ tindex +'"><div class="pic"><img src="data/Official/3-5/S-'+ dbData['photos']['0'] +'" class="img-fluid" alt=""></div><p>'+ dbData['summary']['zh'] +'</p></div>');
                     }
                 }
                 
