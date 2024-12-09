@@ -7,10 +7,6 @@
     src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC");
 }
 
-@font-face {
-    src: url(fonts/DFRareBook-Rosewood.woff2) format('woff2');
-}
-
 body {
     font-family: 'Microsoft JhengHe', 'Noto Sans TC', sans-serif;
     color: #000;
@@ -18,16 +14,6 @@ body {
     line-height: 1.5em;
     background-color: #d4d4d4;
     letter-spacing: 0.04em;
-}
-
-#info{
-    position: fixed;
-    left: 0;
-    color: #000;
-    background-color: #ffffff;
-    top: 0;
-    z-index: 9999;
-    padding: 5px;
 }
 
 sup.linkto {
@@ -919,289 +905,12 @@ section {
     background-color: #f3f8fa;
 }
 
-.section-title {
-    text-align: center;
-    padding-bottom: 30px;
-}
-
-.section-title h2 {
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-}
-
-.section-title h2::before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 120px;
-    height: 1px;
-    background: #ddd;
-    bottom: 1px;
-    left: calc(50% - 60px);
-}
-
-.section-title h2::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: #68A4C4;
-    bottom: 0;
-    left: calc(50% - 20px);
-}
-
-.section-title p {
-    margin-bottom: 0;
-}
-
 .toggle_menu {
     cursor: pointer;
 }
 
-
-/*--------------------------------------------------------------
-# HRiver
---------------------------------------------------------------*/
-
-.HRiver {
-    position: relative;
-    display: block;
-    margin: 30px auto 60px;
-    width: 100%;
-    min-height: 1000px;
-    max-width: 1500px;
-    overflow: hidden;
-}
-.River {
-    position: relative;
-    display: block;
-    background: url(../../images/homepage_map.png) center center no-repeat;
-    background-size: contain;
-    width: 95vw;
-    max-width: 1500px;
-    max-height: 1000px;
-    transform-origin: 50% 50%;
-    margin: 0 0 0 5vw;
-}
-
 .opacity0{
     opacity: 0;
-}
-
-.HRiver .cht {
-    position: absolute;
-    width: 395px;
-    max-width: 90vw;
-    top: 646px;
-    left: 0;
-    margin-left: 15px;
-}
-
-.HRiver .eng {
-    position: absolute;
-    width: 545px;
-    max-width: 90vw;
-    top: 35px;
-    right: 1vw;
-}
-
-.HRiver h3 {
-    color: #9d357c;
-    font-size: 45px;
-    font-weight: bold;
-    margin: 0 0 20px;
-}
-
-.HRiver p {
-    color: #231815;
-    font-size: 22px;
-    line-height: 2em;
-}
-
-.HRiver .eng p {
-    color: #595757;
-    font-size: 18px;
-}
-
-.HRiver .points {
-    position: absolute;
-    border-radius: 50%;
-    width: 1.9vw;
-    max-width: 29px;
-    height: 1.9vw;
-    max-height: 29px;
-    transition: all .3s ease;
-    transform-origin: 50% 50%;
-}
-
-.HRiver .points:hover {
-    background-color: #9d357c;
-    box-shadow: 0 0 10px 5px rgba(155, 35, 117, 0.5);
-}
-
-.HRiver .points span{
-    position: absolute;
-    color: #7b7a7b;
-    font-size: 45px;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.HRiver .points:hover span{
-    color: #000;
-}
-
-.HRiver .points.p3 span {
-    top: 0;
-    left: 95px;
-}
-
-.HRiver .points.p4 span {
-    top: 0;
-    left: -75px;
-}
-
-.HRiver .points.p6 span {
-    top: 0;
-    left: 95px;
-}
-
-.HRiver .points.p7 span {
-    top: 0;
-    left: -75px;
-}
-
-.HRiver .points.p1 {
-    top: 22.9%;
-    left: 2.9%;
-}
-
-.HRiver .points.p2 {
-    top: 22.9%;
-    left: 32.7%;
-}
-
-.HRiver .points.p3 {
-    top: 30.7%;
-    left: 44.4%;
-}
-
-.HRiver .points.p4 {
-    top: 47.5%;
-    left: 27%;
-}
-
-.HRiver .points.p5 {
-    top: 54.5%;
-    left: 53.7%;
-}
-
-.HRiver .points.p6 {
-    top: 62.5%;
-    left: 64.2%;
-}
-
-.HRiver .points.p7 {
-    top: 79%;
-    left: 42%;
-}
-
-.HRiver .points.p8 {
-    top: 87%;
-    left: 52.4%;
-}
-
-.HRiver .points.p9 {
-    top: 87%;
-    left: 79.8%;
-}
-
-@media (max-width: 1400px) {
-    .HRiver .cht {
-        position: relative;
-        top: 0;
-        width: auto;
-        margin: 0 10vw 30px;
-    }
-    .HRiver .eng {
-        position: relative;
-        top: 0;
-        width: auto;
-        margin: 0 10vw 30px;
-    }
-}
-
-@media (max-width: 540px) {
-    .River{
-        margin: 0 0 30px 5vw;
-    }
-    .HRiver p {
-        font-size: 20px;
-        line-height: 1.8em;
-    }
-    .HRiver .points span{
-        font-weight: bold;
-    }
-    .HRiver h3 {
-        font-size: 26px;
-        font-weight: bold;
-    }
-}
-
-
-/*--------------------------------------------------------------
-# person
---------------------------------------------------------------*/
-
-.person {
-    position: relative;
-    display: block;
-    background-color: #FFF;
-}
-
-.person img {
-    transition: all .3s ease;
-}
-
-.person:hover img {
-    opacity: .8;
-}
-
-.person h3 {
-    position: absolute;
-    bottom: 1.8em;
-    width: 100%;
-    color: #000;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2vw;
-    transition: all .3s ease;
-}
-
-.person:hover h3 {
-    transform: scale(1.1);
-}
-
-.person h3 span {
-    font-size: 1.3vw;
-}
-
-.personinfo {
-    background-color: #736357;
-}
-
-.personinfo p {
-    color: #b5a087;
-    font-size: 15px;
-    text-align: center;
-    line-height: 15px;
-    margin: 0;
-    padding: 10px;
 }
 
 h2.tips {
@@ -1324,45 +1033,11 @@ p .more:hover{
     opacity: .85;
 }
 
-.Racing_TeamInfo {
-    min-height: 680px;
-    display: flex;
-    align-items: center;
-    background: url(../../images/bg4.jpg) center 0 no-repeat;
-    position: relative;
-    background-size: cover;
-    padding: 30px 0;
-}
-
-.Racing_TeamInfo .row {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-.Racing_TeamInfo .tips {
-    color: #627780;
-    text-align: end;
-}
-
-.Racing_TeamInfo p {
-    color: #231815;
-    font-size: 18px;
-    line-height: 2.2em;
-    margin: 45px 0 0;
-    max-width: 544px;
-    float: right;
-}
-
-.Racing_TeamInfo p .more{
-    color: #231815;
-}
-
 .LinkInfo {
     min-height: 806px;
     display: flex;
     align-items: center;
-    background: url(../../images/bg5.jpg) center 0 no-repeat;
+    background: #fff url(../../images/bg5.jpg) center 0 no-repeat;
     position: relative;
     background-size: cover;
     padding: 30px 0;
@@ -1420,12 +1095,6 @@ p .more:hover{
 }
 
 @media (max-width: 768px) {
-    .person h3 {
-        font-size: 4vw;
-    }
-    .person h3 .stitle {
-        font-size: 2.8vw;
-    }
     .LinkInfo .row {
         margin: -110px auto 0;
     }
@@ -1462,14 +1131,10 @@ p .more:hover{
     .videoInfo {
         min-height: 590px;
     }
-    .Racing_TeamInfo {
-        min-height: 430px;
-    }
     .aboutInfo p {
         margin: 0 0 30px;
     }
     .videoInfo p,
-    .Racing_TeamInfo p,
     .LinkInfo p {
         margin: 0 30px;
     }
@@ -1479,132 +1144,12 @@ p .more:hover{
     .imgs img {
         width: 24vw;
     }
-    .personinfo p {
-        font-size: 13px;
-    }
 }
 
-
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-.about_page #header {
-    background: url(../../images/bg_about.jpg) center 0 no-repeat;
-}
-.About {
-    background: url(../../images/bg_about2.jpg) center 0 repeat-y;
-}
-.About h2 {
-    font-size: 45px;
-    margin: 100px auto;
-    color: #808080;
-    text-align: center;
-}
-
-.About h3 {
-    font-size: 32px;
-    margin: 30px 0;
-    color: #627780;
-}
-
-.About hr {
-    margin: 30px 0 90px;
-    border-color: #b4b4b4;
-}
-
-.About p {
-    font-size: 22px;
-    margin: 0 0 60px;
-    line-height: 1.7em;
-    letter-spacing: 2px;
-}
 ul > li,
 ol > li {
     font-size: 22px;
     line-height: 1.7em;
-}
-
-.titles,
-.titles h4 {
-    color: #627780;
-    font-weight: bold;
-}
-.titles p {
-    color: #000;
-    font-weight: normal;
-}
-
-.dean {
-    color: #000;
-    font-size: 32px;
-    text-align: end;
-    margin: 0 0 100px;
-}
-
-.number1 {
-    counter-reset: chapter;
-}
-.number1 > ul > li {
-    counter-increment: chapter;
-    counter-reset: section;
-    margin-left: 1em;
-    list-style: none;
-    text-indent: -1.5em;
-}
-.number1 > ul > li::before {
-    content: counter(chapter) ".";
-    margin-right: 0.5em;
-}
-.number5 {
-    counter-reset: chapter 4;
-}
-.number5 > ul > li {
-    counter-increment: chapter;
-    counter-reset: section;
-    margin-left: 1em;
-    list-style: none;
-    text-indent: -1.5em;
-}
-.number5 > ul > li::before {
-    content: counter(chapter) ".";
-    margin-right: 0.5em;
-}
-
-.number8 {
-    counter-reset: chapter 8;
-}
-.number8 > ul > li {
-    counter-increment: chapter;
-    counter-reset: section;
-    margin-left: 1em;
-    list-style: none;
-    text-indent: -1.5em;
-}
-.number8 > ul > li::before {
-    content: counter(chapter) ".";
-    margin-right: 0.5em;
-}
-
-.About .area1{
-    background: rgb(255 255 255 / 55%);
-    width: 100%;
-    overflow: hidden;
-}
-
-.About .area1:before{
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: url(../../images/bg_about2.jpg) center bottom no-repeat;
-    position: absolute;
-    z-index: -1;
-}
-
-.About .area2{
-    background: url(../../images/bg_about3.jpg) center center no-repeat;
-    background-size: cover;
-    padding: 150px 0;
-    overflow: hidden;
 }
 
 .btn_dept{
@@ -1623,27 +1168,8 @@ a:hover .btn_dept{
 }
 
 @media (max-width: 540px) {
-    .About {
-        background-size: 125%;
-        background-repeat: repeat-y;
-    }
-    .About h2 {
-        font-size: 38px;
-        margin-bottom: 40px;
-    }
-    .About h3 {
-        font-size: 30px;
-        margin-top: 40px;
-    }
-    .About h2 .stitle {
-        font-size: 26px;
-        margin-bottom: 60px;
-    }
     .deer {
         width: 40vw;
-    }
-    .About p {
-        font-size: 18px;
     }
     .LinkInfo h3 {
         text-shadow: 0 2px 3px rgb(0 0 0 / 40%);
@@ -2168,10 +1694,6 @@ a:hover .btn_dept{
     margin: 0 auto;
 }
 
-.RacingTeam_page #big_pic img{
-    min-height: auto;
-}
-
 #pic_info p{
     text-align: center;
     padding: 15px 30px;
@@ -2379,253 +1901,6 @@ a:hover .btn_dept{
     }
 }
 
-
-/*--------------------------------------------------------------
-# RacingTeam
---------------------------------------------------------------*/
-.RacingTeam_page #header {
-    background: url(../../images/bg_RacingTeam.jpg) center 0 no-repeat;
-}
-
-.RacingTeam {
-    background: url(../../images/bg_RacingTeam1.jpg) center 0 repeat-y;
-}
-
-.RacingTeam h3 {
-    font-size: 32px;
-    margin: 30px 0;
-    color: #627780;
-}
-
-.RacingTeam h4 {
-    font-size: 25px;
-    margin: 22px 0;
-    color: #000;
-    font-weight: bold;
-}
-
-.RacingTeam p {
-    font-size: 22px;
-    margin: 0 0 60px;
-    line-height: 1.7em;
-    letter-spacing: 2px;
-}
-
-.RacingTeam .box {
-    margin: 0 2.6% 27px 0;
-    float: left;
-}
-
-.RacingTeam .box:nth-child(even) {
-    margin: 0 0 27px;
-    float: right;
-}
-
-.RacingTeam .box.b1 {
-    width: 52%;
-}
-
-.RacingTeam .box.b2 {
-    width: 45.4%;
-}
-
-.RacingTeam .box.b3 {
-    width: 52%;
-}
-
-.RacingTeam .box.b4 {
-    width: 45.4%;
-    margin: -14.5% 0 0;
-}
-
-.RacingTeam .box.b5 {
-    width: 40.6%;
-}
-
-.RacingTeam .box.b6 {
-    width: 56%;
-}
-
-.RacingTeam .table-bordered td {
-    border: 1px solid #b7b6b6;
-}
-
-.RacingTeam hr {
-    margin: 30px 0 90px;
-    border-color: #b4b4b4;
-}
-
-.RacingTeam .RTmt{
-    margin-top: 215px;
-}
-
-.RacingTeam .area1{
-    background: url(../../images/bg_RacingTeam2.jpg) center 0 repeat-y;
-    min-height: 1529px;
-    overflow: hidden;
-}
-
-.RacingTeam .area2{
-    background: url(../../images/bg_RacingTeam3.png) center bottom no-repeat;
-    min-height: 633px;
-    margin: -100px 0 0;
-    overflow: hidden;
-}
-
-.RacingTeam .area2>div{
-    margin: 115px 0 0;
-}
-
-.RacingTeam .area2 a{
-    color: #fff;
-    text-decoration: none;
-    transition: all .3s ease;
-    display: block;
-}
-
-.RacingTeam .area2 a:hover{
-    transform: scale(.9);
-}
-
-.RacingTeam .mt150{
-    margin-top: 150px;
-}
-
-.RacingTeam .RHistory{
-    position: relative;
-}
-
-.RacingTeam .RHistory::before{
-    content: '';
-    width: 4px;
-    height: 100%;
-    background-color: #8c8c8c;
-    left: 33%;
-    top: 0;
-    display: block;
-    position: absolute;
-    z-index: 0;
-}
-
-.RacingTeam .RHistory ul{
-    list-style: none;
-    padding: 160px 0;
-    margin: 0 0 0 29.5%;
-}
-
-.RacingTeam .RHistory ul li{
-    padding: 0 0 0 17%;
-    margin: 45px 0;
-    position: relative;
-    min-height: 110px;
-    font-size: 18px;
-    width: 55%;
-}
-
-.RacingTeam .RHistory ul li::before{
-    content: '';
-    background-color: #95d9ea;
-    width: 17px;
-    height: 88px;
-    display: block;
-    position: absolute;
-    z-index: 1;
-    left: 7%;
-}
-
-.RacingTeam .RHistory ul li.color1::before{
-    background-color: #53a1ff;
-}
-
-.RacingTeam .RHistory ul li.color0::before{
-    background-color: transparent;
-}
-
-.RacingTeam .RHistory ul li strong{
-    display: block;
-    font-size: 22px;
-}
-
-.RacingTeam .RHistory ul li.pos2 strong{
-    padding-top: 20px;
-}
-
-.RacingTeam .linePic{
-    position: absolute;
-    width: 32%;
-    cursor: pointer;
-}
-
-.RacingTeam .linePic img{
-    transition: all .3s ease;
-}
-
-.RacingTeam .linePic:hover img{
-    transform: scale(.95);
-}
-
-.RacingTeam .linePic:before{
-    content: '';
-    background-color: #a7a7a7;
-    width: 50%;
-    height: 1px;
-    display: block;
-    position: absolute;
-    z-index: -1;
-    right: -15%;
-    top: 50%;
-}
-
-.RacingTeam .linePic.p1 {
-    left: 50%;
-    transform: translate(-170%, -30%);
-    padding: 0 4% 0 0;
-}
-
-.RacingTeam .linePic.p2 {
-    right: 50%;
-    transform: translate(160%, -30%);
-    padding: 0 0 0 4%;
-}
-
-.RacingTeam .linePic.p3 {
-    left: 50%;
-    transform: translate(-170%, -30%);
-    padding: 0 4% 0 0;
-}
-
-.RacingTeam .linePic.p4 {
-    right: 50%;
-    transform: translate(160%, -30%);
-    padding: 0 0 0 4%;
-}
-
-.RacingTeam .linePic.p2:before,
-.RacingTeam .linePic.p4:before{
-    left: -110%;
-    width: 150%;
-    top: 36%;
-}
-
-.RacingTeam .stext {
-    display: block;
-    margin: 0 0 30px;
-}
-
-.picGroup {
-    width: 100%;
-    max-width: 936px;
-    overflow: hidden;
-}
-@media (max-width: 540px) {
-    .RacingTeam .RTmt {
-        margin-top: 115px;
-    }
-    .RacingTeam p {
-        font-size: 18px;
-    }
-}
-
 .boxp .pic{
     cursor: pointer;
     height: 287px;
@@ -2703,221 +1978,15 @@ a:hover .btn_dept{
     }
 }
 
-
-/*--------------------------------------------------------------
-# OAlumni
---------------------------------------------------------------*/
-.OAlumni_page #header {
-    background: url(../../images/bg_OAlumni.jpg) center 0 no-repeat;
-}
-
-.OAlumni {
-    background: url(../../images/bg_RacingTeam1.jpg) center 0 repeat-y;
-}
-
-.OAlumni h2.person {
-    font-size: 34px;
-    line-height: 1.4em;
-    margin: 30px 0 60px;
-    color: #627780;
-    background-color: transparent;
-    font-weight: bold;
-}
-
-.OAlumni h3 {
-    font-size: 26px;
-    margin: 30px 0;
-    color: #000;
-    font-weight: bold;
-}
-
-.OAlumni h3.persons {
-    font-size: 30px;
-    margin: 30px 0;
-    color: #fff;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    font-weight: lighter;
-    pointer-events: none;
-}
-
-.OAlumni h3.persons.text-black {
-    color: #000;
-}
-
-.OAlumni h3.persons strong {
-    display: block;
-    font-weight: bold;
-}
-
-.OAlumni h4 {
-    font-size: 25px;
-    margin: 22px 0;
-    color: #000;
-    font-weight: bold;
-}
-
-.OAlumni p {
-    font-size: 22px;
-    margin: 0 0 60px;
-    line-height: 1.7em;
-    letter-spacing: 2px;
-}
-
-.OAlumni .sir_list img {
-    width: 100%;
-    cursor: pointer;
-    transition: all .3s ease;
-}
-
-.OAlumni .sir_list {
-    max-width: 1409px;
-}
-
-.OAlumni .sir_list>div {
-    overflow: hidden;
-    background-color: #000;
-}
-
-.OAlumni .sir_list>div:hover img {
-    opacity: .35;
-    transform: scale(1.2);
-}
-
-.OAlumni .sir_list>div:hover h3.persons.text-black {
-    color: #fff;
-}
-
-.OAlumni hr {
-    margin: 30px 0 90px;
-    border-color: #b4b4b4;
-}
-
-.OAlumni .area1 {
-    padding: 0 0 107px;
-    background: url(../../images/bg_OAlumni2.jpg) center 0 repeat-y;
-}
-
-.OAlumni .area2 {
-    padding: 0 0 107px;
-    background: #fff url(../../images/bg_OAlumni2.jpg) center 0 repeat-y;
-    max-width: 1920px;
-    width: 100%;
-}
-
-.OAlumni .person_1,
-.OAlumni .person_2,
-.OAlumni .person_3,
-.OAlumni .person_4,
-.OAlumni .person_5,
-.OAlumni .person_6{
-    display: none;
-    padding: 15px 0;
-    max-width: 1414px;
-}
-
-.OAlumni .area2 .show {
-    display: block !important;
-}
-
-.OAlumni .area2 h3.persons {
-    font-size: 1vw;
-    margin: 10px 0;
-}
-
-.OAlumni .area2 .box_p {
-    position: relative;
-    width: 15.4%;
-    max-width: 218px;
-    overflow: hidden;
-    transition: all .3s ease;
-    cursor: pointer;
-    background-color: #000;
-}
-
-.OAlumni .area2 .box_p img {
-    transform: scale(1.01);
-    transition: all .3s ease;
-}
-
-.OAlumni .area2 .box_p:hover img {
-    transform: scale(1.3);
-    opacity: .5;
-}
-
-.OAlumni .area2 .box_p.active:hover img {
-    transform: scale(1.01);
-    opacity: 1;
-}
-
-.OAlumni .area2 .box_p.active {
-    width: 22.5%;
-    max-width: 316px;
-}
-
-.OAlumni .area2 .box_p.active h3.persons {
-    display: none;
-}
-
 .hidden{
     display: none;
-}
-
-@media (max-width: 1920px) and (min-width: 992px) {
-    .OAlumni h3.persons {
-        font-size: 1.6vw;
-    }
-}
-
-@media (max-width: 991px) and (min-width: 768px) {
-    .OAlumni h3.persons {
-        font-size: 2.6vw;
-    }
-}
-
-@media (max-width: 767px) {
-    .OAlumni .area2 h3.persons {
-        display: none;
-    }
-    .OAlumni h3.persons {
-        font-size: 4vw;
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 540px) {
-    .OAlumni .person_fixed.fixed{
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 99;
-        padding: 80px 0 0;
-    }
-    .OAlumni .person_fixed.fixed:before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        height: 80px;
-        width: 100%;
-        display: block;
-        background-color: rgb(255 255 255 / 50%);
-        backdrop-filter: blur(3px);
-    }
-    .OAlumni .area2.fixed {
-        padding: 100px 0 107px;
-    }
 }
 
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
 
 #footer {
     background-color: #fff;
@@ -2926,6 +1995,9 @@ a:hover .btn_dept{
     font-size: 18px;
     max-width: 1920px;
     margin: 0 auto;
+}
+.home_page #footer {
+    padding: 5vw 0 90px 0;
 }
 
 #footer .footer-link{
@@ -3325,5 +2397,8 @@ a:hover .btn_dept{
     }
     #footer .privacy {
         padding: 30px 0 15px 75px;
+    }
+    .aetitle {
+        max-height: 30px;
     }
 }
