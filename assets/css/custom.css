@@ -554,7 +554,7 @@ h6,
 }
 
 .nav-menu a.dropdown-item:hover {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .nav-menu .dropdown-toggle::after {
@@ -1269,6 +1269,10 @@ a:hover .btn_dept{
 
 .bg_gb p {
     color: #fff;
+}
+
+.text-gray {
+    color: #595757;
 }
 
 @media (max-width: 540px) {
