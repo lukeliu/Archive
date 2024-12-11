@@ -2139,7 +2139,7 @@ a:hover .btn_dept{
 
 #footer .footer-top .footer-link .dropdown-menu {
     margin-top: -11px;
-    max-width: 180px;
+    max-width: 200px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -2403,6 +2403,7 @@ a:hover .btn_dept{
         padding: 30px 0 15px 75px;
     }
     .aetitle {
-        max-height: 30px;
+        max-height: 45px;
+        max-width: 95%;
     }
 }
