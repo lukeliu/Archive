@@ -429,6 +429,10 @@ h6,
         background-position-x: 65%;
         min-height: 900px;
     }
+    .anti_epidemic_page5 #header {
+        background-position-x: 30%;
+        min-height: 900px;
+    }
 }
 
 
