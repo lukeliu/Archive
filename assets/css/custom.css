@@ -403,23 +403,27 @@ h6,
     }
     .home_page #header {
         background-position-x: 72%;
-        min-height: 690px;
+        min-height: 900px;
     }
     .history_page #header {
         background-position-x: 65%;
-        min-height: 690px;
+        min-height: 900px;
     }
     .anti_epidemic_page1 #header {
         background-position-x: 65%;
-        min-height: 690px;
+        min-height: 900px;
     }
     .anti_epidemic_page6 #header {
         background-position-x: 65%;
-        min-height: 690px;
+        min-height: 900px;
     }
     .challenge_page #header {
         background-position-x: 65%;
         min-height: 690px;
+    }
+    .anti_epidemic_page2 #header {
+        background-position-x: 65%;
+        min-height: 900px;
     }
 }
 
@@ -723,19 +727,19 @@ h6,
 
 @media (max-width: 580px) {
     #header .h_title img {
-        margin: 22vh auto 0 4%;
+        margin: 35vh auto 0 4%;
         width: 80%;
     }
     .history_page #header .h_title img {
-        margin: 22vh auto 0 4%;
+        margin: 35vh auto 0 4%;
         width: 84%;
     }
     .anti_epidemic_page1 #header .h_title img {
-        margin: 22vh auto 0 4%;
+        margin: 35vh auto 0 4%;
         width: 84%;
     }
     .challenge_page #header .h_title img {
-        margin: 22vh auto 0 4%;
+        margin: 35vh auto 0 4%;
         width: 84%;
     }
 }
