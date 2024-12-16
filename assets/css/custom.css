@@ -56,6 +56,10 @@ h6,
     overflow: hidden;
 }
 
+.hide{
+    display: none;
+}
+
 @media (min-width: 1920px) {
     .container,
     .container-lg,
@@ -1573,7 +1577,7 @@ a:hover .btn_dept{
 .infomation p .time {
     font-size: 30px;
     margin-bottom: 40px;
-    display: block;
+    display: none;
 }
 
 .infomation p.eng {
