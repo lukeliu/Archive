@@ -252,7 +252,7 @@ h6,
     width: 40%;
     height: auto;
     max-width: fit-content;
-    margin: 24vh auto 0 9%;
+    margin: 19vh auto 0 9%;
 }
 
 #header hr {
@@ -739,15 +739,15 @@ h6,
 
 @media (max-width: 580px) {
     #header .h_title img {
-        margin: 35vh auto 0 4%;
+        margin: 28vh auto 0 4%;
         width: 80%;
     }
     .history_page #header .h_title img {
-        margin: 35vh auto 0 4%;
+        margin: 28vh auto 0 4%;
         width: 84%;
     }
     .anti_epidemic_page1 #header .h_title img {
-        margin: 35vh auto 0 4%;
+        margin: 28vh auto 0 4%;
         width: 84%;
     }
     .challenge_page #header .h_title img {
