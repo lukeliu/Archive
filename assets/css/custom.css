@@ -282,6 +282,12 @@ h6,
     padding-right: 0px !important;
 }
 
+@media (min-width: 1920px) {
+    #header .h_title img {
+        margin: 7% auto 0 9%;
+    }
+}
+
 @media (max-width: 1500px) {
     #header h1.title {
         font-size: 3.5vw;
