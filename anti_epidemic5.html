@@ -465,7 +465,7 @@
                     // 處理文物圖檔
                     $("#List_Photo div").html('');
                     for (var i = 0; i < dbData["photos"].length; i++) {
-                        $("#List_Photo .scroll").append('<img class="img-fluid photo" src="./data/Official/3-5/'+ dbData["photos"][i] +'" big="./data/Official/3-5/'+dbData["photos"][i]+'" alt="">');
+                        $("#List_Photo .scroll").append('<img class="img-fluid photo" src="./data/Official/3-5/'+ dbData["photos"][i] +'" big="/data/Official/3-5/'+dbData["photos"][i]+'" alt="">');
                     };
                     $("#Big_Photo").html('');
 
@@ -540,7 +540,10 @@
                 for(i = 0; i < urls.length; i++){
                     if(big === './data/Official/3-5/' + urls[i]) setbigpic = ' big_pic';
                 }
-                $("#Big_Photo").append('<img class="img-fluid photo'+ setbigpic +'" src="'+ big +'" alt="">');
+                var pathname = window.location.pathname;
+                var path1 = pathname.substring(0, pathname.lastIndexOf('/'));
+                var url = location.origin + path1;
+                $("#Big_Photo").append('<img class="img-fluid photo'+ setbigpic +'" src="'+ url + big +'" alt="">');
 
                 $("#Big_Photo .photo").extm({
                     squareOverlay:true,
@@ -591,7 +594,6 @@
             $('#List_Photo').on('click', '.photo.active', function() {
                 var pathname = window.location.pathname;
                 var big = $(this).attr('big');
-                big = big.replace('.','');
                 var path1 = pathname.substring(0, pathname.lastIndexOf('/'));
                 var url = location.origin + path1 + big;
                 console.log('url : '+ url);
