@@ -745,15 +745,15 @@ h6,
 
 @media (max-width: 580px) {
     #header .h_title img {
-        margin: 28vh auto 0 4%;
+        margin: 24vh auto 0 4%;
         width: 80%;
     }
     .history_page #header .h_title img {
-        margin: 28vh auto 0 4%;
+        margin: 25vh auto 0 4%;
         width: 84%;
     }
     .anti_epidemic_page1 #header .h_title img {
-        margin: 28vh auto 0 4%;
+        margin: 24vh auto 0 4%;
         width: 84%;
     }
     .challenge_page #header .h_title img {
